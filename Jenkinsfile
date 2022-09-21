@@ -18,7 +18,7 @@ pipeline{
                     cd html
                     sudo git init
                     sudo git config --global --add safe.directory /var/www/html
-                    sudo git remote add origin https://github.com/cent-kanayo/docker.git
+                    sudo git remote add origin https://github.com/Jadesolax/dockerJenkinsTest.git
                     sudo git pull origin main
                    
                 '''
