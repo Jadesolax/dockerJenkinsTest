@@ -8,10 +8,10 @@ pipeline{
 
         stage("Build"){
             steps{
-                echo "running"
+                echo "pulling git repo"
                 sh '''
                     
-                    sudo ssh -i /var/lib/jenkins/docker1.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-52-91-244-28.compute-1.amazonaws.com
+                    sudo ssh -i /var/lib/jenkins/docker2.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-54-84-12-12.compute-1.amazonaws.com
                     cd /var/www
                     sudo rm -rf html
                     sudo mkdir html
@@ -19,7 +19,7 @@ pipeline{
                     sudo git init
                     sudo git config --global --add safe.directory /var/www/html
                     sudo git remote add origin https://github.com/Jadesolax/dockerJenkinsTest.git
-                    sudo git pull origin main
+                    sudo git pull origin master
                    
                 '''
             }
@@ -27,7 +27,7 @@ pipeline{
           
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'instaling docker'
                 sh '''
                     sudo apt-get update
                     sudo apt-get install \
