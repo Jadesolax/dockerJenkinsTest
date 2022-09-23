@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import useFetch from "./useFetch";
 // make sure to use https
-export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_DB}`;
+export const API_ENDPOINT = 'https://www.omdbapi.com/?apikey=9367e2a6';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
