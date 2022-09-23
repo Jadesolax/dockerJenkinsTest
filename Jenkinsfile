@@ -11,7 +11,7 @@ pipeline{
                 echo "pulling git repo"
                 sh '''
                     
-                    sudo ssh -i /var/lib/jenkins/docker2.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-54-84-12-12.compute-1.amazonaws.com
+                    sudo ssh -i /var/lib/jenkins/docker3.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-44-203-195-3.compute-1.amazonaws.com
                     cd /var/www
                     sudo rm -rf html
                     sudo mkdir html
